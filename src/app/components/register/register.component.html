@@ -1,0 +1,87 @@
+<!-- <div class="flex items-center justify-center min-h-screen bg-gradient-to-r from-blue-500 to-zinc-300">
+  <div class="bg-white p-8 rounded-lg shadow-lg w-96">
+    <h2 class="text-2xl font-bold text-center text-gray-700 mb-6">Registrazione</h2>
+    <form (submit)="register()" class="space-y-4">
+
+      <div class="relative">
+        <input type="email" [(ngModel)]="user.email" name="email" id="email"
+          class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+          placeholder="email " required />
+        <label for="email"
+          class="absolute left-4 top-2 text-gray-500 bg-white px-1 transition-all duration-200 pointer-events-none">
+        </label>
+      </div>
+
+      <div class="relative">
+        <input type="text" [(ngModel)]="user.username" name="username" id="username"
+          class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+          placeholder="username " required />
+        <label for="username"
+          class="absolute left-4 top-2 text-gray-500 bg-white px-1 transition-all duration-200 pointer-events-none">
+        </label>
+      </div>
+
+
+      <div class="relative">
+        <input type="password" [(ngModel)]="user.password" name="password" id="password"
+          class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+          placeholder="password " required />
+        <label for="password"
+          class="absolute left-4 top-2 text-gray-500 bg-white px-1 transition-all duration-200 pointer-events-none">
+        </label>
+      </div>
+
+      <button type="submit"
+        class="w-full bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-lg transition duration-200">
+        Registrati
+      </button>
+    </form>
+
+
+    <p *ngIf="message" class="mt-4 text-center text-sm text-gray-600">{{ message }}</p>
+  </div>
+</div> -->
+
+
+<div class="flex items-center justify-center min-h-screen bg-gradient-to-r from-blue-500 to-zinc-300">
+  <div class="bg-white p-8 rounded-lg shadow-lg w-96">
+    <h2 class="text-2xl font-bold text-center text-gray-700 mb-6">Registrazione</h2>
+    <form (submit)="register()" class="space-y-4">
+      <!-- Email Field -->
+      <div class="relative">
+        <input type="email" [(ngModel)]="user.email" name="email" id="email"
+          class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+          placeholder="Email" required />
+      </div>
+
+      <!-- Username Field -->
+      <div class="relative">
+        <input type="text" [(ngModel)]="user.username" name="username" id="username"
+          class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+          placeholder="Username" required />
+      </div>
+
+      <!-- Password Field -->
+      <div class="relative">
+        <input type="password" [(ngModel)]="user.password" name="password" id="password"
+          class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+          placeholder="Password" required />
+      </div>
+
+      <!-- Submit Button -->
+      <button type="submit"
+        class="w-full bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-lg transition duration-200">
+        Registrati
+      </button>
+    </form>
+
+    <!-- Link per login -->
+    <p class="mt-4 text-center text-sm text-gray-600">
+      Hai già un account?
+      <a routerLink="/login" class="text-blue-500 hover:underline">Accedi</a>
+    </p>
+
+    <!-- Message Display -->
+    <p *ngIf="message" class="mt-4 text-center text-sm text-gray-600">{{ message }}</p>
+  </div>
+</div>

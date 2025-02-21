@@ -1,0 +1,97 @@
+<!-- <div class="min-h-screen bg-gray-100 py-12 px-4 sm:px-6 lg:px-8 flex items-center">
+  <div class="max-w-4xl mx-auto bg-white p-8 rounded-lg shadow-lg">
+    <h2 class="text-3xl font-semibold text-gray-800 mb-6">Profilo Utente</h2>
+
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <div>
+        <h3 class="text-lg font-medium text-gray-600">Nome</h3>
+        <p class="text-gray-800">{{ candidato.nome }}</p>
+      </div>
+      <div>
+        <h3 class="text-lg font-medium text-gray-600">Email</h3>
+        <p class="text-gray-800">{{ candidato.email }}</p>
+      </div>
+    </div>
+
+
+    <div class="mt-6 space-y-4">
+      <div>
+        <h3 class="text-lg font-medium text-gray-600">Telefono</h3>
+        <p class="text-gray-800">{{ candidato.telefono || 'Non disponibile' }}</p>
+      </div>
+      <div>
+        <h3 class="text-lg font-medium text-gray-600">Esperienza</h3>
+        <p class="text-gray-800">{{ candidato.esperienza || 'Non specificata' }} anni</p>
+      </div>
+      <div>
+        <h3 class="text-lg font-medium text-gray-600">Competenze</h3>
+        <p class="text-gray-800">{{ candidato.competenze || 'Non specificate' }}</p>
+      </div>
+      <div>
+        <h3 class="text-lg font-medium text-gray-600">Istruzione</h3>
+        <p class="text-gray-800">{{ candidato.istruzione || 'Non specificata' }}</p>
+      </div>
+    </div> -->
+
+
+<div class="min-h-screen bg-gray-100 py-12 px-4 sm:px-6 lg:px-8 flex items-center">
+  <div class="max-w-4xl mx-auto bg-white p-8 rounded-lg shadow-lg">
+    <h2 class="text-3xl font-semibold text-gray-800 mb-6">Profilo Utente</h2>
+
+    <!-- Informazioni utente -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <div>
+        <h3 class="text-lg font-medium text-gray-600">Nome</h3>
+        <p class="text-gray-800">{{ candidato.nome }}</p>
+      </div>
+      <div>
+        <h3 class="text-lg font-medium text-gray-600">Email</h3>
+        <p class="text-gray-800">{{ candidato.email }}</p>
+      </div>
+    </div>
+
+    <!-- Dettagli aggiuntivi -->
+    <div class="mt-6 grid grid-cols-1 md:grid-cols-2 gap-6">
+      <div>
+        <h3 class="text-lg font-medium text-gray-600">Telefono</h3>
+        <p class="text-gray-800">{{ candidato.telefono || 'Non disponibile' }}</p>
+      </div>
+      <div>
+        <h3 class="text-lg font-medium text-gray-600">Esperienza</h3>
+        <p class="text-gray-800">{{ candidato.esperienza || 'Non specificata' }} anni</p>
+      </div>
+      <div>
+        <h3 class="text-lg font-medium text-gray-600">Competenze</h3>
+        <p class="text-gray-800">{{ candidato.competenze || 'Non specificate' }}</p>
+      </div>
+      <div>
+        <h3 class="text-lg font-medium text-gray-600">Istruzione</h3>
+        <p class="text-gray-800">{{ candidato.istruzione || 'Non specificata' }}</p>
+      </div>
+    </div>
+
+    <!-- Caricamento CV -->
+    <div class="mt-8 border-t pt-6">
+      <h3 class="text-xl font-semibold text-gray-800 mb-4">Carica il tuo CV</h3>
+
+      <div class="flex items-center space-x-4">
+        <!-- Input file personalizzato -->
+        <label for="cvUpload"
+          class="bg-blue-500 text-white px-4 py-2 rounded-lg cursor-pointer hover:bg-blue-600 transition">
+          📄 Seleziona un file
+        </label>
+        <input type="file" id="cvUpload" accept=".pdf" (change)="onFileSelected($event)" class="hidden" />
+
+        <!-- Nome del file selezionato -->
+        <span *ngIf="selectedFile" class="text-gray-700">{{ selectedFile.name }}</span>
+      </div>
+
+      <!-- Pulsante di upload -->
+      <button (click)="uploadCV()"
+        class="mt-4 w-full md:w-auto px-6 py-2 bg-green-500 text-white font-semibold rounded-lg hover:bg-green-600 transition">
+        📤 Carica CV
+      </button>
+    </div>
+  </div>
+</div>
