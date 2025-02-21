@@ -1,0 +1,50 @@
+<!-- <div class="flex items-center justify-center min-h-screen bg-gradient-to-r from-blue-500 to-zinc-300  ">
+  <div class="bg-white p-8 rounded-lg shadow-lg w-96">
+    <h2 class="text-2xl font-bold text-center text-gray-700">Login</h2>
+    <form class="mt-4" (submit)="login($event)">
+      <div class="mb-4 mt-6">
+        <label>
+          <label for="email">Email</label>
+          <input [(ngModel)]="email" name="email" class=" w-full px-4 py-2 border rounded-lg" id="email" />
+        </label>
+      </div>
+      <div class="mb-4 mt-6">
+        <label>
+          <label for="password">Password</label>
+          <input type="password" [(ngModel)]="password" name="password" class=" w-full px-4 py-2 border rounded-lg"
+            id="password" />
+        </label>
+      </div>
+      <button
+        class="w-full bg-blue-600 transition duration-300 ease-in-out hover:bg-blue-900 text-white font-bold py-2 px-4 rounded-lg">Accedi</button>
+    </form>
+  </div>
+</div> -->
+
+<div class="flex items-center justify-center min-h-screen bg-gradient-to-r from-blue-500 to-zinc-300">
+  <div class="bg-white p-8 rounded-lg shadow-lg w-96">
+    <h2 class="text-2xl font-bold text-center text-gray-700">Login</h2>
+    <form class="mt-4" (submit)="login($event)">
+      <div class="mb-4 mt-6">
+        <label for="email" class="text-gray-700">Email</label>
+        <input [(ngModel)]="email" name="email" id="email"
+          class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500" required />
+      </div>
+      <div class="mb-4 mt-6">
+        <label for="password" class="text-gray-700">Password</label>
+        <input type="password" [(ngModel)]="password" name="password" id="password"
+          class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500" required />
+      </div>
+      <button
+        class="w-full bg-blue-600 transition duration-300 ease-in-out hover:bg-blue-900 text-white font-bold py-2 px-4 rounded-lg">
+        Accedi
+      </button>
+    </form>
+
+    <!-- Link per registrazione -->
+    <p class="mt-4 text-center text-sm text-gray-600">
+      Non hai un account?
+      <a routerLink="/register" class="text-blue-500 hover:underline">Registrati</a>
+    </p>
+  </div>
+</div>
